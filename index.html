@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>To-Do List App</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="manifest" href="manifest.json" />
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-    <script src="firebase-config.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('service-worker.js')
-                .then(() => console.log('Service Worker registered'))
-                .catch(console.error);
-            });
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotifi | Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col items-center p-4">
-    <h1 class="text-3xl font-bold mb-6 text-center">To-Do List</h1>
-    <div class="w-full max-w-md bg-white rounded shadow p-6">
-        <div class="flex space-x-2">
-            <input id="taskInput" type="text" placeholder="Tambah tugas baru..." class="flex-grow border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            <button id="addTaskBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200">Tambah</button>
-        </div>
-        <div class="mt-4">
-            <select id="filter" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option value="all">Semua</option>
-                <option value="completed">Selesai</option>
-                <option value="incomplete">Belum Selesai</option>
-            </select>
-        </div>
-        <ul id="taskList" class="mt-4 space-y-2 max-h-[400px] overflow-y-auto"></ul>
-        <button id="logoutBtn" class="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-200">Logout</button>
+<body>
+    
+    <div class="background">
+        <img src="assets/kitausahakanlagi.jpg" id="bg-img">
     </div>
-    <script src="app.js"></script>
+
+    <div class="container">
+        <div class="player-img">
+            <img src="assets/kitausahakanlagi.jpg" class="active" id="cover">
+        </div>
+
+        <h2 id="music-title">Test</h2>
+        <h3 id="music-artist">Test</h3>
+
+        <div class="player-progress" id="player-progress">
+            <div class="progress" id="progress"></div>
+            <div class="music-duration">
+                <span class="current-time">0:00</span>
+                <span class="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <i class="fa-solid fa-backward" title="Previous"></i>
+            <i class="fa-solid fa-play play-button" title="Play"></i>
+            <i class="fa-solid fa-forward" title="Next"></i>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
