@@ -67,7 +67,7 @@ function loadMusic(song) {
 }
 
 function changeMusic(direction) {
-    musicIndex = (music + direction + songs.length) %
+    musicIndex = (musicIndex + direction + songs.length) %
     songs.length;
     loadMusic(songs[musicIndex]);
     playMusic();
@@ -80,7 +80,7 @@ function updateProgressBar() {
 
     const formatTime = (time) => String(Math.floor(time)).padStart(2, '0');
     durationEl.textContent = `${formatTime(duration / 60)}:${formatTime(duration % 60)}`;
-    currentTimeEl.textContent = `${formatTime(current / 60)}:${formatTime(current % 60)}`;
+    currentTimeEl.textContent = `${formatTime(currentTime / 60)}:${formatTime(currentTime % 60)}`;
 
 } 
 
