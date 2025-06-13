@@ -19,17 +19,35 @@ const songs = [
         cover: 'assets/1.jpg',
         artist: 'Batas Senja',
     },
-        {
+    {
         path: 'assets/2.mp3',
         displayName: 'Laskar Pelangi',
         cover: 'assets/2.jpg',
         artist: 'Nidji',
     },
-        {
+    {
         path: 'assets/3.mp3',
         displayName: 'Nina',
         cover: 'assets/3.jpg',
         artist: 'Feast',
+    },
+    {
+        path: 'assets/4.mp3',
+        displayName: 'Rumah ke Rumah',
+        cover: 'assets/4.jpg',
+        artist: 'Hindia',
+    },
+    {
+        path: 'assets/5.mp3',
+        displayName: 'Evaluasi',
+        cover: 'assets/5.jpg',
+        artist: 'Hindia',
+    },
+    {
+        path: 'assets/6.mp3',
+        displayName: 'Hitam dan Putih',
+        cover: 'assets/6.jpg',
+        artist: 'Fourtwnty',
     }
 ];
 
