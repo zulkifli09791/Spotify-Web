@@ -58,12 +58,12 @@ function  pauseMusic() {
     music.pause();
 }
 
-function loadMusic(song) {
-    music.src = song.path;
-    title.textContent = song.displayName;
-    artist.textContent = song.artist;
-    image.src = song.cover;
-    background.src = song.cover;
+function loadMusic(songs) {
+    music.src = songs.path;
+    title.textContent = songs.displayName;
+    artist.textContent = songs.artist;
+    image.src = songs.cover;
+    background.src = songs.cover;
 }
 
 function changeMusic(direction) {
@@ -74,7 +74,7 @@ function changeMusic(direction) {
 }
 
 function updateProgressBar() {
-    const {duration, currentTime} = music;
+    const { duration, currentTime} = music;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
 
